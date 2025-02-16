@@ -1,2 +1,25 @@
 @import "tailwindcss";
 @config "../tailwind.config.ts";
+
+@font-face {
+  font-family: "Styrene";
+  src: url("/src/assets/fonts/Styrene-400.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Styrene";
+  src: url("/src/assets/fonts/Styrene-500.woff2") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Styrene";
+  src: url("/src/assets/fonts/Styrene-700.woff2") format("woff2");
+  font-weight: 700;
+}
+body {
+  font-family: "Styrene";
+  font-size: 14px;
+  color: #232838;
+}

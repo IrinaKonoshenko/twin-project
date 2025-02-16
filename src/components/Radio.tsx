@@ -1,8 +1,7 @@
 import clsx from "clsx";
-import { Icon } from "./icon/Icon";
 import { Typography } from "./Typography";
 
-interface CheckboxProps {
+interface RadioProps {
   value: boolean;
   label: string;
   disabled?: boolean;
@@ -10,13 +9,13 @@ interface CheckboxProps {
   onChange: () => void;
 }
 
-export function Checkbox({
+export function Radio({
   value,
   disabled,
   label,
   invalid,
   onChange,
-}: CheckboxProps) {
+}: RadioProps) {
   return (
     <div
       className={clsx("inline-flex gap-2 group select-none", {
@@ -25,25 +24,23 @@ export function Checkbox({
       })}
     >
       <input
-        type="checkbox"
+        type="radio"
         checked={value}
         onChange={onChange}
         className="hidden"
       />
       <div
         className={clsx(
-          "mt-1 border border-border-off rounded-[3px] w-4 h-4 shrink-0 justify-center items-center flex transition",
+          "mt-1 border border-border-off rounded-full w-4 h-4 shrink-0 justify-center items-center flex transition",
           {
             "bg-[#F8F7FA]": disabled,
             "group-hover:border-secondary": !disabled && !invalid,
-            "bg-secondary border-secondary": value && !disabled,
-            "bg-border-off": disabled && value,
+            "bg-white border-secondary border-[5px]": value && !disabled,
+            "border-border-off bg-white border-[5px]": disabled && value,
             "border-pink bg-pink/10": invalid,
           }
         )}
-      >
-        {value && <Icon size="9" icon="check" className="text-white" />}
-      </div>
+      ></div>
       <Typography
         className={clsx("text-normal", {
           "text-border-off": disabled,
