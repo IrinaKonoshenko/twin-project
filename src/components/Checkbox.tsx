@@ -34,10 +34,10 @@ export function Checkbox({
         className={clsx(
           "mt-1 border border-border-off rounded-[3px] w-4 h-4 shrink-0 justify-center items-center flex transition",
           {
-            "bg-[#F8F7FA]": disabled,
+            "bg-disabled": disabled && !value,
+            "bg-border-off": disabled && value,
             "group-hover:border-secondary": !disabled && !invalid,
             "bg-secondary border-secondary": value && !disabled,
-            "bg-border-off": disabled && value,
             "border-pink bg-pink/10": invalid,
           }
         )}

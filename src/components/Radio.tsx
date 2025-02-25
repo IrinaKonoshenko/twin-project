@@ -33,7 +33,7 @@ export function Radio({
         className={clsx(
           "mt-1 border border-border-off rounded-full w-4 h-4 shrink-0 justify-center items-center flex transition",
           {
-            "bg-[#F8F7FA]": disabled,
+            "bg-disabled": disabled,
             "group-hover:border-secondary": !disabled && !invalid,
             "bg-white border-secondary border-[5px]": value && !disabled,
             "border-border-off bg-white border-[5px]": disabled && value,
