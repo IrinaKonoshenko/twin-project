@@ -21,5 +21,38 @@
 body {
   font-family: "Styrene";
   font-size: 14px;
+  line-height: 24px;
   color: #232838;
+}
+
+.html p {
+  @apply text-normal text-[#58546F];
+}
+.html p:not(:last-child) {
+  @apply mb-6;
+}
+.html h1 {
+}
+.html h3:not(:last-child) {
+  @apply mb-4;
+}
+.html h2 {
+}
+.html h3 {
+  @apply text-header3 text-[#232838];
+}
+.html h4 {
+}
+.html h5 {
+}
+.html h6 {
+}
+.html ul {
+}
+.html li {
+}
+.html ol {
+}
+.html img {
+  @apply rounded-lg overflow-hidden;
 }

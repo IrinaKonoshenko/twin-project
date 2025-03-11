@@ -21,7 +21,7 @@ export function HeroSection() {
             <Button color="blue" rounded filled text="Начать" />
             <Link
               to="/"
-              className="flex gap-3 items-center text-secondary text-header4"
+              className="flex gap-3 items-center text-secondary text-header4 ring ring-transparent rounded-full p-1 pr-2 hover:ring-secondary"
             >
               <div className="w-8 h-8 bg-blue rounded-full flex justify-center items-center fill-white">
                 <Icon icon="play" className="text-white" size="32" />

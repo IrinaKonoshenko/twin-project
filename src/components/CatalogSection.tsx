@@ -24,12 +24,18 @@ export function CatalogSection() {
                   <img src="/images/phone.jpg" alt="" />
                 </div>
                 <div className="absolute -bottom-6 right-8 flex gap-4 justify-center items-center z-10">
-                  <div className="w-12 h-12 rounded-full bg-white text-secondary flex justify-center items-center z-10 shadow-[0_4px_8px_rgba(144,152,160,0.16)]">
+                  <a
+                    href=""
+                    className="w-12 h-12 rounded-full bg-white text-secondary flex justify-center items-center z-10 shadow-[0_4px_8px_rgba(144,152,160,0.16)] hover:text-white hover:bg-secondary transition"
+                  >
                     <Icon icon="play" size="36" />
-                  </div>
-                  <div className="w-12 h-12 rounded-full bg-secondary text-white flex justify-center items-center z-10">
+                  </a>
+                  <a
+                    href=""
+                    className="w-12 h-12 rounded-full bg-secondary text-white flex justify-center items-center z-10 hover:text-secondary hover:bg-white transition"
+                  >
                     <Icon icon="plus" size="22" />
-                  </div>
+                  </a>
                 </div>
               </div>
               <div className="px-8 pt-4.5 pb-8 flex flex-col gap-10">
@@ -52,8 +58,18 @@ export function CatalogSection() {
                   </div>
                 </div>
                 <div className="flex gap-4 items-center">
-                  <Icon icon="facebook" size="30" />
-                  <Icon icon="vk" size="30" />
+                  <a
+                    href=""
+                    className="hover:scale-110 transition-transform duration-300"
+                  >
+                    <Icon icon="facebook" size="30" />
+                  </a>
+                  <a
+                    href=""
+                    className="hover:scale-110 transition-transform duration-300"
+                  >
+                    <Icon icon="vk" size="30" />
+                  </a>
                 </div>
               </div>
             </li>
@@ -63,11 +79,15 @@ export function CatalogSection() {
                   <img src="/images/tablet.jpg" alt="" />
                 </div>
                 <div className="absolute -bottom-6 right-8 flex gap-4 justify-center items-center z-10">
-                  <div className="w-12 h-12 rounded-full bg-white text-secondary flex justify-center items-center z-10 shadow-[0_4px_8px_rgba(144,152,160,0.16)]">
-                    <Icon icon="play" size="36" />
+                  <div className="w-12 h-12 rounded-full bg-white text-secondary flex justify-center items-center z-10 shadow-[0_4px_8px_rgba(144,152,160,0.16)] hover:text-white hover:bg-secondary transition">
+                    <a href="">
+                      <Icon icon="play" size="36" />
+                    </a>
                   </div>
-                  <div className="w-12 h-12 rounded-full bg-secondary text-white flex justify-center items-center z-10">
-                    <Icon icon="plus" size="22" />
+                  <div className="w-12 h-12 rounded-full bg-secondary text-white flex justify-center items-center z-10 hover:text-secondary hover:bg-white transition">
+                    <a href="">
+                      <Icon icon="plus" size="22" />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -91,9 +111,24 @@ export function CatalogSection() {
                   </div>
                 </div>
                 <div className="flex gap-4 items-center">
-                  <Icon icon="whatsapp" size="30" />
-                  <Icon icon="viber" size="30" />
-                  <Icon icon="telegram" size="30" />
+                  <a
+                    href=""
+                    className="hover:scale-110 transition-transform duration-300"
+                  >
+                    <Icon icon="whatsapp" size="30" />
+                  </a>
+                  <a
+                    href=""
+                    className="hover:scale-110 transition-transform duration-300"
+                  >
+                    <Icon icon="viber" size="30" />
+                  </a>
+                  <a
+                    href=""
+                    className="hover:scale-110 transition-transform duration-300"
+                  >
+                    <Icon icon="telegram" size="30" />
+                  </a>
                 </div>
               </div>
             </li>
@@ -103,11 +138,15 @@ export function CatalogSection() {
                   <img src="/images/car.jpg" alt="" />
                 </div>
                 <div className="absolute -bottom-6 right-8 flex gap-4 justify-center items-center z-10">
-                  <div className="w-12 h-12 rounded-full bg-white text-secondary flex justify-center items-center z-10 shadow-[0_4px_8px_rgba(144,152,160,0.16)]">
-                    <Icon icon="play" size="36" />
+                  <div className="w-12 h-12 rounded-full bg-white text-secondary flex justify-center items-center z-10 shadow-[0_4px_8px_rgba(144,152,160,0.16)] hover:text-white hover:bg-secondary transition">
+                    <a href="">
+                      <Icon icon="play" size="36" />
+                    </a>
                   </div>
-                  <div className="w-12 h-12 rounded-full bg-secondary text-white flex justify-center items-center z-10">
-                    <Icon icon="plus" size="22" />
+                  <div className="w-12 h-12 rounded-full bg-secondary text-white flex justify-center items-center z-10 hover:text-secondary hover:bg-white transition">
+                    <a href="">
+                      <Icon icon="plus" size="22" />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -131,8 +170,18 @@ export function CatalogSection() {
                   </div>
                 </div>
                 <div className="flex gap-4 items-center">
-                  <Icon icon="vk" size="30" />
-                  <Icon icon="whatsapp" size="30" />
+                  <a
+                    href=""
+                    className="hover:scale-110 transition-transform duration-300"
+                  >
+                    <Icon icon="vk" size="30" />
+                  </a>
+                  <a
+                    href=""
+                    className="hover:scale-110 transition-transform duration-300"
+                  >
+                    <Icon icon="whatsapp" size="30" />
+                  </a>
                 </div>
               </div>
             </li>

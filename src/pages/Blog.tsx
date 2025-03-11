@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { BlogCard } from "../components/BlogCard";
 import { Chip } from "../components/Chip";
 import { Icon } from "../components/icon/Icon";
@@ -74,7 +75,20 @@ const blogList: {
   },
 ];
 
+function useBlogData() {
+  const options = new Set([...blogList.map((item) => item.status ?? "Empty")]);
+  const [status, setStatus] = useState("Empty");
+
+  const elements = blogList.filter((item) =>
+    status === "Empty" ? true : item.status === status
+  );
+
+  return { options, elements, setStatus, status };
+}
+
 export default function Blog() {
+  const { options, elements, setStatus, status } = useBlogData();
+
   return (
     <section className="mt-[108px] pb-20">
       <div className="max-w-[1312px] mx-auto flex-col flex gap-6">
@@ -113,13 +127,14 @@ export default function Blog() {
           <Typography className="text-header3">Всего 478 публикаций</Typography>
           <div>
             <Select
-              label="Самые новые"
-              elementRight={<Icon icon="caretDown" size="6" />}
+              options={[...options]}
+              defaultValue={status}
+              onChange={(val) => setStatus(val)}
             />
           </div>
         </div>
         <div className="grid grid-cols-3 gap-6">
-          {blogList.map((items, index) => (
+          {elements.map((items, index) => (
             <BlogCard
               key={index}
               createdDate={items.createdDate}

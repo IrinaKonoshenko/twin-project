@@ -7,6 +7,7 @@ import {
   isToday,
 } from "date-fns";
 import { Status } from "./Status";
+import { Link } from "react-router-dom";
 
 interface BlogCardProps {
   img: string;
@@ -39,12 +40,12 @@ export function BlogCard({
   }, [createdDate]);
 
   return (
-    <div className="flex flex-col ring ring-border-off rounded-lg overflow-hidden h-120">
+    <div className="flex flex-col ring ring-border-off rounded-lg overflow-hidden h-120 relative">
       <div className="flex justify-center items-center overflow-hidden h-60 shrink-0">
         <img className="w-full h-full object-cover" src={img} alt="" />
       </div>
       <div className="flex flex-col gap-2 pt-4 px-6 pb-6 justify-between flex-grow border-t border-t-border-off">
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 h-[171px]">
           <div className="text-header4">{title}</div>
           <div className="text-normal text-description">{description}</div>
         </div>
@@ -55,6 +56,7 @@ export function BlogCard({
           </div>
         </div>
       </div>
+      <Link to="/blog-item" className="absolute inset-0 z-10" />
     </div>
   );
 }

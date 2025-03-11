@@ -31,6 +31,7 @@ export default {
         text: "#435269",
         blue: "#007BFF",
         description: "#58546F",
+        tertiary: "#56556E",
       },
       fontSize: {
         header1: ["30px", { lineHeight: "40px", fontWeight: "700" }],

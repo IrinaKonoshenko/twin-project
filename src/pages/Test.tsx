@@ -1,3 +1,4 @@
+import { Accordion } from "../components/Accordion";
 import { Button } from "../components/Button";
 import { Checkbox } from "../components/Checkbox";
 import { Chip } from "../components/Chip";
@@ -10,6 +11,7 @@ import { Textarea } from "../components/Textarea";
 export default function Test() {
   return (
     <div className="flex flex-col gap-10 ">
+      {/* заголовки */}
       <div>
         <h1 className="text-header1">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, nisi.
@@ -33,6 +35,7 @@ export default function Test() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, nisi.
         </h6>
       </div>
+      {/* Checkbox */}
       <div className="flex flex-wrap justify-center items-center gap-10">
         <Checkbox value={true} label="aaaaaa" onChange={() => null} />
         <Checkbox value={false} label="aaaaaa" onChange={() => null} />
@@ -42,7 +45,7 @@ export default function Test() {
 
         <Checkbox value={false} label="aaaaaa" invalid onChange={() => null} />
       </div>
-
+      {/* Radio */}
       <div className="flex flex-wrap justify-center items-center gap-10">
         <Radio value={true} label="aaaaaa" onChange={() => null} />
         <Radio value={false} label="aaaaaa" onChange={() => null} />
@@ -52,7 +55,7 @@ export default function Test() {
 
         <Radio value={false} label="aaaaaa" invalid onChange={() => null} />
       </div>
-
+      {/* Chip */}
       <div className="flex flex-wrap justify-center items-center gap-10">
         <Chip value={true} label="Включено" onChange={() => null} />
         <Chip value={false} label="Отключено" onChange={() => null} />
@@ -62,7 +65,7 @@ export default function Test() {
 
         <Chip value={false} label="Отключено" invalid onChange={() => null} />
       </div>
-
+      {/* Input */}
       <div className="flex flex-wrap justify-center gap-10">
         <Input placeholder="текст" value="ааааа" />
         <Input placeholder="текст" value="ааааа" label="название" />
@@ -161,7 +164,7 @@ export default function Test() {
           disabled={true}
         />
       </div>
-
+      {/* Textarea */}
       <div className="flex flex-wrap justify-center gap-10">
         <Textarea
           elementRight={<Icon icon="facebook" />}
@@ -202,14 +205,14 @@ export default function Test() {
           disabled={true}
         />
       </div>
-
+      {/* Tag */}
       <div className="flex flex-wrap justify-center items-center gap-10">
         <Tag textTag="AMO" onClick={() => null} />
         <Tag textTag="Битрикс24" onClickRemove={() => null} />
         <Tag textTag="Компания" onClickRemove={() => null} />
         <Tag textTag="Битрикс24" onClickRemove={() => null} disabled />
       </div>
-
+      {/* Button */}
       <div className="flex flex-wrap justify-center items-center gap-10">
         <div className="container flex flex-col gap-5">
           <div className="flex gap-5">
@@ -308,6 +311,17 @@ export default function Test() {
             />
           </div>
         </div>
+      </div>
+      {/* Accordion */}
+      <div className="flex flex-wrap justify-center items-center gap-10">
+        <Accordion title="Тип бота">
+          <div className="flex flex-col gap-2">
+            <Checkbox label="Exadasdad" value={true} onChange={() => null} />
+            <Checkbox label="Exadasdad" value={false} onChange={() => null} />
+            <Checkbox label="Exadasdad" value={true} onChange={() => null} />
+            <Checkbox label="Exadasdad" value={true} onChange={() => null} />
+          </div>
+        </Accordion>
       </div>
     </div>
   );

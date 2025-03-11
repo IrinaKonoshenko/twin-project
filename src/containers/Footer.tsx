@@ -34,13 +34,38 @@ export function Footer() {
         </div>
         <div className="flex flex-col gap-6 items-end">
           <div className="flex gap-2">
-            <Icon icon="telegram" size="24"></Icon>
-            <Icon icon="whatsapp" size="24"></Icon>
-            <Icon icon="vk" size="24"></Icon>
+            <a
+              href=""
+              className="hover:scale-110 transition-transform duration-300"
+            >
+              <Icon icon="telegram" size="24"></Icon>
+            </a>
+            <a
+              href=""
+              className="hover:scale-110 transition-transform duration-300"
+            >
+              <Icon icon="whatsapp" size="24"></Icon>
+            </a>
+            <a
+              href=""
+              className="hover:scale-110 transition-transform duration-300"
+            >
+              <Icon icon="vk" size="24"></Icon>
+            </a>
           </div>
           <div className="flex flex-col gap-3 items-end">
-            <p className="text-very-small text-[#56556E]">hello@twin24.ai</p>
-            <p className="text-very-small text-[#56556E]">+7 (999) 999-99-99</p>
+            <a
+              href="mailto:hello@twin24.ai"
+              className="text-very-small text-tertiary hover:text-secondary"
+            >
+              hello@twin24.ai
+            </a>
+            <a
+              href="tel:+79999999999"
+              className="text-very-small text-tertiary hover:text-secondary"
+            >
+              +7 (999) 999-99-99
+            </a>
           </div>
         </div>
       </div>

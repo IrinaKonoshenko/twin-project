@@ -3,10 +3,10 @@ import { Typography } from "./Typography";
 
 interface StatusProps {
   text: string;
-  color: "green" | "red";
+  color?: "green" | "red";
 }
 
-export function Status({ text, color }: StatusProps) {
+export function Status({ text, color = "green" }: StatusProps) {
   return (
     <div
       className={clsx("rounded-[30px] px-2 py-1", {

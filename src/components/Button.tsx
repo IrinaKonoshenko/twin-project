@@ -16,8 +16,8 @@ interface ButtonProps {
 
 export function Button({
   text,
-  color,
-  borderStyle,
+  color = "blue",
+  borderStyle = "thin",
   leftElement,
   rightElement,
   filled,
@@ -98,8 +98,7 @@ export function Button({
                 !disabled && !filled && color !== "white",
               "group-active:text-white":
                 borderStyle !== "thin" && !disabled && color !== "white",
-              "group-active:text-[#56556E]":
-                borderStyle === "thin" && !disabled,
+              "group-active:text-tertiary": borderStyle === "thin" && !disabled,
             },
             {
               "text-white": color === "white" && !filled,
@@ -128,7 +127,7 @@ export function Button({
             "group-hover:text-white": !disabled && !filled && color !== "white",
             "group-active:text-white":
               borderStyle !== "thin" && !disabled && color !== "white",
-            "group-active:text-[#56556E]": borderStyle === "thin" && !disabled,
+            "group-active:text-tertiary": borderStyle === "thin" && !disabled,
           },
           {
             "text-white": color === "white" && !filled,
@@ -157,8 +156,7 @@ export function Button({
                 !disabled && !filled && color !== "white",
               "group-active:text-white":
                 borderStyle !== "thin" && !disabled && color !== "white",
-              "group-active:text-[#56556E]":
-                borderStyle === "thin" && !disabled,
+              "group-active:text-tertiary": borderStyle === "thin" && !disabled,
             },
             {
               "text-white": color === "white" && !filled,

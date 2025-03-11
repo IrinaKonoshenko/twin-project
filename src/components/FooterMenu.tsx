@@ -11,7 +11,7 @@ export function FooterMenu({ items }: FooterMenuProps) {
         <li key={path}>
           <Link
             to={path}
-            className="text-header5 text-[#56556E] hover:text-secondary transition"
+            className="text-header5 text-tertiary hover:text-secondary transition"
           >
             {label}
           </Link>
