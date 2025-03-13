@@ -1,18 +1,20 @@
 import { ActionButton } from "../components/ActionButton";
+import { BackLink } from "../components/BackLink";
 import { BotCard } from "../components/BotCard";
 import { Button } from "../components/Button";
 import { Icon } from "../components/icon/Icon";
 import { ReviewCard } from "../components/ReviewCard";
 import { Socials } from "../components/Socials";
-import { Star } from "../components/Stars";
+import { Stars } from "../components/Stars";
 import { Tag } from "../components/Tag";
+import { TruncatedText } from "../components/TruncatedText";
 import { Typography } from "../components/Typography";
 
 export default function Bot() {
   return (
     <div className="mt-21">
       <div className="max-w-[1090px] mx-auto flex flex-col gap-8">
-        <Ref />
+        <BackLink link="/catalog" text="Смотреть все" />
         <div className="flex gap-34 pb-10">
           <LeftSide />
           <RightSide />
@@ -20,19 +22,6 @@ export default function Bot() {
       </div>
       <SimilarBots />
     </div>
-  );
-}
-
-function Ref() {
-  return (
-    <a href="/catalog" className="pt-6 flex gap-2 items-center">
-      <div className="text-secondary">
-        <Icon icon="arrowLeft" />
-      </div>
-      <Typography className="text-header5 text-secondary">
-        Смотреть все
-      </Typography>
-    </a>
   );
 }
 
@@ -142,15 +131,19 @@ function LeftSide() {
         </div>
         <div className="flex items-center gap-4">
           {reviews.map((items, index) => (
-            <ReviewCard
-              key={index}
-              avatarUrl={items.avatarUrl}
-              name={items.name}
-              company={items.company}
-              grade={items.grade}
-              createdDate={items.createdDate}
-              description={items.description}
-            />
+            <div className="w-[314px] max-h-[193px]">
+              <ReviewCard
+                key={index}
+                avatarUrl={items.avatarUrl}
+                name={items.name}
+                company={items.company}
+                grade={items.grade}
+                createdDate={items.createdDate}
+                description={
+                  <TruncatedText text={items.description} maxWords={11} />
+                }
+              />
+            </div>
           ))}
         </div>
       </div>
@@ -169,7 +162,7 @@ function RightSide() {
         <Typography className="text-header5">Оценка бота</Typography>
         <div className="flex gap-1 items-center">
           <Typography>4.1</Typography>
-          <Star count={4} />
+          <Stars count={4} />
           <Typography className="text-[#9E9BB1] text-very-small pt-px">
             12 оценок
           </Typography>

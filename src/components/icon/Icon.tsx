@@ -70,7 +70,7 @@ export type IconName = keyof typeof ICON_LIST;
 
 export interface IconProps {
   icon: IconName;
-  size?: string;
+  size?: string | number;
   className?: string;
 }
 

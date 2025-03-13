@@ -67,21 +67,39 @@ export default function Test() {
       </div>
       {/* Input */}
       <div className="flex flex-wrap justify-center gap-10">
-        <Input placeholder="текст" value="ааааа" />
-        <Input placeholder="текст" value="ааааа" label="название" />
-        <Input placeholder="текст" value="ааааа" label="название" error />
+        <Input placeholder="текст" value="ааааа" onChange={() => null} />
+        <Input
+          placeholder="текст"
+          value="ааааа"
+          label="название"
+          onChange={() => null}
+        />
+        <Input
+          placeholder="текст"
+          value="ааааа"
+          label="название"
+          error
+          onChange={() => null}
+        />
         <Input
           placeholder="текст"
           value="ааааа"
           label="название"
           error="валидация"
+          onChange={() => null}
         />
-        <Input placeholder="текст" value="ааааа" disabled={true} />
+        <Input
+          placeholder="текст"
+          value="ааааа"
+          disabled={true}
+          onChange={() => null}
+        />
         <Input
           placeholder="текст"
           value="ааааа"
           label="название"
           disabled={true}
+          onChange={() => null}
         />
       </div>
       <div className="flex flex-wrap justify-center gap-10">
@@ -170,18 +188,21 @@ export default function Test() {
           elementRight={<Icon icon="facebook" />}
           placeholder="текст"
           value="ааааа"
+          onChange={() => null}
         />
         <Textarea
           elementRight={<Icon icon="whatsapp" />}
           placeholder="текст"
           value="ааааа"
           label="название"
+          onChange={() => null}
         />
         <Textarea
           elementRight={<Icon icon="viber" />}
           placeholder="текст"
           value="ааааа"
           label="название"
+          onChange={() => null}
           error
         />
         <Textarea
@@ -190,18 +211,21 @@ export default function Test() {
           value="ааааа"
           label="название"
           error="валидация"
+          onChange={() => null}
         />
         <Textarea
           elementRight={<Icon icon="telegram" />}
           placeholder="текст"
           value="ааааа"
           disabled={true}
+          onChange={() => null}
         />
         <Textarea
           elementRight={<Icon icon="check" />}
           placeholder="текст"
           value="ааааа"
           label="название"
+          onChange={() => null}
           disabled={true}
         />
       </div>

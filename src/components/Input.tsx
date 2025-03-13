@@ -1,10 +1,10 @@
 import clsx from "clsx";
 import { Typography } from "./Typography";
-import { ChangeEventHandler, ReactNode } from "react";
+import { ChangeEventHandler, ReactNode, useState } from "react";
 
 interface InputProps {
   value: string;
-  placeholder: string;
+  placeholder?: string;
   label?: string;
   error?: boolean | string;
   disabled?: boolean;

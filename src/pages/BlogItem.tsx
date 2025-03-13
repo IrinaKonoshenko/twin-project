@@ -1,3 +1,4 @@
+import { BackLink } from "../components/BackLink";
 import { BlogCard } from "../components/BlogCard";
 import { Button } from "../components/Button";
 import { Icon } from "../components/icon/Icon";
@@ -40,12 +41,7 @@ export default function BlogItem() {
   return (
     <div className="mt-21">
       <div className="max-w-[1090px] mx-auto">
-        <a href="/blog" className="pt-6 flex gap-2 items-center">
-          <div className="text-secondary">
-            <Icon icon="arrowLeft" />
-          </div>
-          <Typography className="text-header5 text-secondary">Назад</Typography>
-        </a>
+        <BackLink text="Назад" link="/blog" />
         <div className="py-10 flex gap-[137px] items-start">
           <div className="flex-grow flex flex-col gap-10">
             <DescriptionBlock />
@@ -214,6 +210,7 @@ export default function BlogItem() {
               placeholder="Email"
               value=""
               className="w-[310px]"
+              onChange={() => null}
             />
             <div>
               <Button

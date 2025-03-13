@@ -7,7 +7,7 @@ interface ReviewCardProps {
   company: string;
   grade: number;
   createdDate: string;
-  description: string;
+  description: React.ReactNode;
 }
 
 const reviews = [
@@ -40,10 +40,6 @@ const reviews = [
   },
 ];
 
-function truncateText(text: string, maxLength: number = 100) {
-  return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
-}
-
 export function ReviewCard({
   avatarUrl,
   name,
@@ -53,7 +49,7 @@ export function ReviewCard({
   description,
 }: ReviewCardProps) {
   return (
-    <div className="flex flex-col gap-4 p-4 ring ring-[#E9E5F0] rounded-lg w-[314px] max-h-[193px]">
+    <div className="flex flex-col gap-4 p-4 ring ring-[#E9E5F0] rounded-lg">
       <div className="flex gap-4 items-center">
         <div className="w-16 h-16 flex justify-center items-center rounded-full overflow-hidden">
           <img src={avatarUrl} alt="" />
@@ -70,9 +66,7 @@ export function ReviewCard({
           </div>
         </div>
       </div>
-      <Typography className="text-normal">
-        {truncateText(description, 85)}
-      </Typography>
+      <Typography className="text-normal">{description}</Typography>
     </div>
   );
 }

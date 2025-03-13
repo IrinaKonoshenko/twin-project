@@ -99,6 +99,7 @@ export default function Blog() {
               value=""
               placeholder="Поиск"
               elementLeft={<Icon icon="picture" size="18" />}
+              onChange={() => null}
             />
           </div>
         </div>

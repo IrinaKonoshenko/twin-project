@@ -5,7 +5,7 @@ import { Checkbox } from "../components/Checkbox";
 import { Icon } from "../components/icon/Icon";
 import { Input } from "../components/Input";
 import { Radio } from "../components/Radio";
-import { Star } from "../components/Stars";
+import { Stars } from "../components/Stars";
 import { Tag } from "../components/Tag";
 import { Typography } from "../components/Typography";
 
@@ -99,9 +99,9 @@ function LeftSide() {
         <div className="flex flex-col gap-2">
           <div className="flex gap-2 items-center">
             <p className="text-small text-input-label">От</p>
-            <Input placeholder="0 ₽" value="" />
+            <Input placeholder="0 ₽" value="" onChange={() => null} />
             <p className="text-small text-input-label">До</p>
-            <Input placeholder="4 256 ₽" value="" />
+            <Input placeholder="4 256 ₽" value="" onChange={() => null} />
           </div>
           <Radio value={false} label="Сначала дешёвые" onChange={() => null} />
           <Radio value={false} label="Сначала дорогие" onChange={() => null} />
@@ -118,7 +118,7 @@ function LeftSide() {
           <Radio value={true} label="Указать рейтинг" onChange={() => null} />
           <div className="flex gap-2 items-center">
             <p className="text-small text-input-label pt-px">От</p>
-            <Star count={4} />
+            <Stars count={4} />
           </div>
         </div>
       </Accordion>
@@ -131,11 +131,13 @@ function LeftSide() {
             <Input
               placeholder="дд.мм.гггг"
               value=""
+              onChange={() => null}
               elementLeft={<Icon icon="calendar" size="17" />}
             />
             <Input
               placeholder="дд.мм.гггг"
               value=""
+              onChange={() => null}
               elementLeft={<Icon icon="calendar" size="17" />}
             />
           </div>

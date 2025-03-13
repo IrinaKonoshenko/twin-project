@@ -1,10 +1,11 @@
+import { ReactNode } from "react";
 import clsx from "clsx";
 import { Icon } from "./icon/Icon";
 import { Typography } from "./Typography";
 
 interface CheckboxProps {
   value: boolean;
-  label: string;
+  label: string | ReactNode;
   disabled?: boolean;
   invalid?: boolean;
   onChange: () => void;

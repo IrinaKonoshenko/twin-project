@@ -21,6 +21,7 @@ export function Header() {
               placeholder="Поиск по названию или ID"
               value=""
               className="bg-white"
+              onChange={() => null}
             />
             <Button
               text="Найти"

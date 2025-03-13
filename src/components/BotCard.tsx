@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ActionButton } from "./ActionButton";
 import { Button } from "./Button";
 import { Icon } from "./icon/Icon";
-import { Star } from "./Stars";
+import { Stars } from "./Stars";
 import { Tag } from "./Tag";
 import { Typography } from "./Typography";
 
@@ -56,7 +56,7 @@ export function BotCard({
           )}
           <div className="flex gap-1 items-center">
             <Typography>{rating}</Typography>
-            <Star count={4} />
+            <Stars count={4} />
             <Typography className="text-[#9E9BB1] text-small pt-px">
               ({countReviews})
             </Typography>

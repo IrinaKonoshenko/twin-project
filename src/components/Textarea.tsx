@@ -11,6 +11,7 @@ interface TextareaProps {
   elementLeft?: ReactNode;
   elementRight?: ReactNode;
   className?: string;
+  rows?: number;
   onChange?: ChangeEventHandler<HTMLTextAreaElement>;
 }
 
@@ -23,6 +24,7 @@ export function Textarea({
   elementLeft,
   elementRight,
   className,
+  rows,
   onChange,
 }: TextareaProps) {
   return (
@@ -56,6 +58,7 @@ export function Textarea({
         <textarea
           disabled={disabled}
           onChange={onChange}
+          rows={rows}
           className={clsx(
             "w-full min-h-[72px] ring ring-inset ring-border-off rounded-lg py-1.5 pl-3 pr-2 text-normal placeholder:text-border-off outline-none transition disabled:bg-disabled disabled:cursor-not-allowed",
             {
